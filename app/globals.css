@@ -36,21 +36,22 @@ footer p {
     color: #302929f9;
 }
 
-.note {
+.list {
     position: relative;
     width: 480px;
     margin: 30px auto 20px auto;
-    background: #fff;
+    background: #f5ba13;
     padding: 15px;
     border-radius: 7px;
     box-shadow: 0 1px 5px rgb(138, 137, 137);
+    text-justify: center;
 }
-.note h1 {
+.list h1 {
     font-size: 1.1em;
     margin-bottom: 6px;
     display: inline;
 }
-.note p {
+.list p {
     font-size: 1.1em;
     margin-bottom: 10px;
     white-space: pre-wrap;
@@ -59,17 +60,18 @@ footer p {
     margin-left: 2rem;
 }
 
-.note button {
-    background: #fff;
+.list button {
+    background: #f5ba13;
     position: relative;
     float: right;
     margin-right: 10px;
-    color: #f5ba13;
+    color: #fff;
     border: none;
     width: 36px;
     height: 36px;
     cursor: pointer;
     outline: none;
+    bottom: 6px;
 }
 
 form {

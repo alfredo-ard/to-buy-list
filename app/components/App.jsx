@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import Note from "./Note";
+import List from "./List";
 import CreateArea from "./CreateArea";
 
 function App() {
@@ -46,7 +46,7 @@ function App() {
             <CreateArea onAdd={addList} />
             {list.map((listItem, index) => {
                 return (
-                    <Note
+                    <List
                         key={index}
                         id={index}
                         title={listItem.num}

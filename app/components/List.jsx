@@ -12,7 +12,7 @@ function Note(props) {
     }
 
     return (
-        <div className="note">
+        <div className="list">
             <h1>{props.content}</h1>
             <p>{props.title}</p>
             <button onClick={handleClick}>DELETE</button>
