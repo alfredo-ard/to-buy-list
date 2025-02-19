@@ -15,9 +15,9 @@ function Note(props) {
         <div className="list">
             <h1>{props.content}</h1>
             <p>{props.title}</p>
-            <button onClick={handleClick}>DELETE</button>
-            <button onClick={handleAddNum}>ADD</button>
+            <button onClick={handleClick}>DEL</button>
             <button onClick={handleMinNum}>MIN</button>
+            <button onClick={handleAddNum}>ADD</button>
         </div>
     );
 }
