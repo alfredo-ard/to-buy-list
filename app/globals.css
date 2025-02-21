@@ -45,34 +45,39 @@ footer p {
     border-radius: 7px;
     box-shadow: 0 1px 5px rgb(138, 137, 137);
     text-justify: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .list h1 {
     font-size: 1.1em;
     margin-bottom: 6px;
-    display: inline;
 }
+
+.list div {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
 .list p {
     font-size: 1.1em;
-    margin-bottom: 10px;
-    display: inline;
-    margin-left: 2rem;
+    margin-top: 5px;
 }
 
 .list button {
     background: #f5ba13;
-    position: relative;
-    float: right;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     color: #fff;
     border: none;
     width: 36px;
     height: 36px;
     cursor: pointer;
     outline: none;
-    bottom: 6px;
+    /* bottom: 6px; */
 }
 
-form {
+form.inputNote {
     position: relative;
     width: 480px;
     margin: 30px auto 20px auto;
@@ -81,8 +86,8 @@ form {
     border-radius: 7px;
     box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
-form input,
-form textarea {
+form.inputNote input,
+form.inputNote textarea {
     width: 100%;
     border: none;
     padding: 4px;
@@ -91,7 +96,7 @@ form textarea {
     font-family: inherit;
     resize: none;
 }
-form button {
+form.inputNote button {
     position: absolute;
     right: 18px;
     bottom: -18px;

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import AddIcon from "@mui/icons-material/Add";
+import Fab from "@mui/material/Fab";
 
 function CreateArea(props) {
     const [list, setList] = useState({
@@ -13,11 +15,13 @@ function CreateArea(props) {
             return {
                 ...prevList,
                 [name]: value,
+                num: "1",
             };
         });
     }
 
     function submitList(event) {
+        console.log(list);
         props.onAdd(list);
         setList({
             num: "",
@@ -28,7 +32,7 @@ function CreateArea(props) {
 
     return (
         <div>
-            <form>
+            <form className="inputNote">
                 <input
                     name="item"
                     onChange={handleChange}
@@ -36,14 +40,10 @@ function CreateArea(props) {
                     placeholder="What item?"
                     rows="1"
                 />
-                <input
-                    name="num"
-                    onChange={handleChange}
-                    value={list.num}
-                    placeholder="How many?"
-                />
 
-                <button onClick={submitList}>Add</button>
+                <Fab onClick={submitList}>
+                    <AddIcon />
+                </Fab>
             </form>
         </div>
     );

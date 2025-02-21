@@ -23,17 +23,28 @@ function App() {
 
     function addNum(id) {
         setLists((prevLists) =>
-            prevLists.map((item, index) =>
-                index === id ? { ...item, num: Number(item.num) + 1 } : item
-            )
+            prevLists.map((item, index) => {
+                return index === id
+                    ? { ...item, num: Number(item.num) + 1 }
+                    : item;
+            })
         );
     }
 
     function minNum(id) {
         setLists((prevLists) =>
-            prevLists.map((item, index) =>
-                index === id ? { ...item, num: Number(item.num) - 1 } : item
-            )
+            prevLists.map((item, index) => {
+                if (index === id) {
+                    if (item.num == "1") {
+                        return item;
+                    } else {
+                        return { ...item, num: Number(item.num) - 1 };
+                    }
+                } else {
+                    return item;
+                }
+                // index === id ? { ...item, num: Number(item.num) - 1 } : item;
+            })
         );
     }
 
@@ -49,8 +60,8 @@ function App() {
                     <List
                         key={index}
                         id={index}
-                        title={listItem.num}
-                        content={listItem.item}
+                        num={listItem.num}
+                        item={listItem.item}
                         onDelete={deleteNote}
                         onAdd={addNum}
                         onMin={minNum}
