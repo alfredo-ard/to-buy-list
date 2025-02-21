@@ -26,11 +26,10 @@ function Note(props) {
                 <button onClick={handleAddNum}>
                     <AddIcon />
                 </button>
+                <button onClick={handleClick}>
+                    <DeleteIcon />
+                </button>
             </div>
-
-            <button onClick={handleClick}>
-                <DeleteIcon />
-            </button>
         </div>
     );
 }

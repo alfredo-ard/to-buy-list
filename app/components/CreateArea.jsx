@@ -4,7 +4,7 @@ import Fab from "@mui/material/Fab";
 
 function CreateArea(props) {
     const [list, setList] = useState({
-        num: "1",
+        num: "",
         item: "",
     });
 
@@ -15,6 +15,7 @@ function CreateArea(props) {
             return {
                 ...prevList,
                 [name]: value,
+                num: "1",
             };
         });
     }
